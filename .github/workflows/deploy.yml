@@ -1,9 +1,9 @@
-name: CI-CD for Youtube
+name: CI-CD for node shop
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
