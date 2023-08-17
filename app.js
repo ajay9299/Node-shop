@@ -50,7 +50,7 @@ app.use((req, res, next) => {
 app.get("/ping", (req, res, next) => {
   return res
     .status(200)
-    .json({ ok: "Ok with ci-cd test----&&&---_____*******------>" });
+    .json({ ok: "Ok with ci-cd test----&&&---yyy_____*******------>" });
 });
 
 app.use("/products", productsRoutes);

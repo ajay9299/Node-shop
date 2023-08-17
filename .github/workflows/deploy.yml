@@ -6,25 +6,6 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use node js
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install and build
-        run: |
-          npm install
-
-        env:
-          CI: true
-
   deploy:
     runs-on: ubuntu-latest
 
@@ -45,5 +26,4 @@ jobs:
              cd ~/Node-Shop
              git pull origin master
              npm install
-             npm run build
              pm2 restart api
