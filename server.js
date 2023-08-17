@@ -10,7 +10,7 @@ const route = require("./app");
 app.get("/ping", (req, res, next) => {
   return res
     .status(200)
-    .json({ ok: "Ok with ci-cd test----&&&---****------>" });
+    .json({ ok: "Ok with ci-cd test----&&&---_____*******------>" });
 });
 
 app.use("/api", route);
