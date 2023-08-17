@@ -45,7 +45,7 @@ jobs:
              nvm instal 18
              npm install -g pm2
              cd ~/Node-Shop
-             git pull origin main
+             git pull origin master
              npm install
              npm run build
              pm2 restart api
