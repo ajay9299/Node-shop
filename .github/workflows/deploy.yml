@@ -18,12 +18,23 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.39.0/install.sh    | bash
-            . ~/.nvm/nvm.sh
 
-             nvm instal 18
-             npm install -g pm2
-             cd ~/Node-Shop
-             git pull origin master
-             npm install
-             pm2 restart api
+            # Change directory to the location of your Git repository
+            cd ~/Node-shop
+
+            # Update the repository with latest changes
+            git pull origin master
+
+            # Install nvm and use Node.js 18
+            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.39.0/install.sh | bash
+            . ~/.nvm/nvm.sh
+            nvm install 18
+
+            # Install pm2 globally with appropriate permissions
+            npm install -g pm2 --unsafe-perm
+
+            # Install project dependencies
+            npm install
+
+            # Restart the pm2 process
+            pm2 restart api
