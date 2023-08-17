@@ -4,17 +4,17 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-mongoose
-  .connect("mongodb://localhost:27017/shop", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("Connection Success...");
-  })
-  .catch((e) => {
-    console.log(e);
-  });
+// mongoose
+//   .connect("mongodb://localhost:27017/shop", {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => {
+//     console.log("Connection Success...");
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
 
 const productsRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
@@ -45,7 +45,6 @@ app.use((req, res, next) => {
   console.log("API HIT -------------->", info, "\n|\nv\n|\nv\n");
   next();
 });
-
 
 // Routes which should handle requests
 app.use("/products", productsRoutes);
