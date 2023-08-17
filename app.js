@@ -47,6 +47,12 @@ app.use((req, res, next) => {
 });
 
 // Routes which should handle requests
+app.get("/ping", (req, res, next) => {
+  return res
+    .status(200)
+    .json({ ok: "Ok with ci-cd test----&&&---_____*******------>" });
+});
+
 app.use("/products", productsRoutes);
 app.use("/orders", orderRoutes);
 app.use("/user", userRoutes);
