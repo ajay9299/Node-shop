@@ -21,13 +21,11 @@ jobs:
       - name: npm install and build
         run: |
           npm install
-          npm run build
 
         env:
           CI: true
 
   deploy:
-    needs: [build]
     runs-on: ubuntu-latest
 
     steps:

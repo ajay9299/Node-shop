@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "webpack --mode development",
-    "start:prod": "node dist/server.js"
+    "prod": "node server.js"
   },
   "author": "ajay",
   "license": "ISC",
