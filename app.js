@@ -48,9 +48,7 @@ app.use((req, res, next) => {
 
 // Routes which should handle requests
 app.get("/ping", (req, res, next) => {
-  return res
-    .status(200)
-    .json({ ok: "Ok with ci-cd abhishek_____++++________->" });
+  return res.status(200).json({ ok: "Ok with ci-cd ++++________->" });
 });
 
 app.use("/products", productsRoutes);
